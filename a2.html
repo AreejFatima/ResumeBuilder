@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="a2.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Profile</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="toppane" contenteditable="true">
+        <br />
+        <h1 class="col-md-8 col-md-offset-2 text-center">
+          Build Your Profile....
+        </h1>
+      </div>
+      <div class="leftpane">
+        <div class="dp">
+          <canvas id="canvas"></canvas>
+          <label class="custom-file-upload">
+            <input type="file" id="inp" />
+            upload profile picture
+          </label>
+        </div>
+        <br /><br />
+        <h1 class="info">Personal Details</h1>
+        <section class="Personaldetails">
+          <button id="add" onclick="show()">Add</button>
+
+          <div id="popup">
+            <form id="form">
+              <button type="button" id="close" onclick="hide()">X</button>
+              <br />
+              <p1>Name:</p1>
+              <br />
+              <input id="name" name="name" type="text" /><input
+                type="checkbox"
+                id="inp_name"
+                name="inp_name"
+              />
+              <br />
+              <p1>Gender:</p1>
+              <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option></select
+              ><input type="checkbox" id="inp_gender" name="inp_gender" />
+              <br />
+              <br />
+              <p1>Age:</p1>
+              <br />
+              <input id="age" name="age" type="text" /><input
+                type="checkbox"
+                id="inp_age"
+                name="inp_age"
+              />
+              <br />
+              <p1>Address:</p1>
+              <br />
+              <input id="country" name="country" type="text" />
+              <input type="checkbox" id="inp_address" name="inp_address" />
+              <br />
+              <p1>Phone:</p1>
+              <br />
+              <input id="phone" name="phone" type="number" /><input
+                type="checkbox"
+                id="inp_phone"
+                name="inp_phone"
+              />
+              <br />
+              <button type="button" id="submit" onclick="add()">Submit</button>
+              <br />
+            </form>
+          </div>
+          <div id="results">
+            <div class="cont">
+              Name: Example<br />Age: 12<br />Country: Example <br />Phone
+              +921112223334 <br />Gender: Male
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="middlepane" id="middlepane">
+        <br />
+        <h1 class="info2">Degree/Certificate</h1>
+        <br /><br />
+        <div class="degree" id="degree">
+          <button id="add2" class="addDegree">Add</button>
+          <div contenteditable="true">
+            <input type="text" name="degName[1]" />
+            <input type="date" name="degDate[1]" />
+            <select name="degInstitute[1]">
+              <option>Institute</option>
+              <option value="uni1">Quaid-i-Azam University (QAU)</option>
+              <option value="uni2">Air University Islamabad</option>
+              <option value="uni3">
+                University of Agriculture in Faisalabad
+              </option>
+              <option value="uni4">FAST-NUCES</option>
+              <option value="uni5">University of Karachi</option>
+            </select>
+          </div>
+          <br />
+        </div>
+        <br /><br />
+        <h1 class="info2">Skills</h1>
+        <br />
+        <div class="skills">
+          <div>
+            <form
+              id="skillsForm"
+              class="skillsForm"
+              name="skillsForm"
+              style="display: none"
+            >
+              <!-- <button type="button" id="remove" onclick="hideSkills()">x</button><br> -->
+              <label for="skillName">Skill:</label>
+              <input
+                type="text"
+                id="skillNamez"
+                name="skillName"
+                size="25"
+                placeholder="your skill"
+              />
+              <label for="skillLevel">Skill Level:</label>
+              <select name="skillLevel[1]" id="skillLevel">
+                <option>Beginner</option>
+                <option>Average</option>
+                <option>Expert</option>
+              </select>
+              <button type="button" id="remove" onclick="hideSkills()">x</button
+              ><br />
+              <button type="button" id="submit2" onclick="validateSkills()">
+                add
+              </button>
+            </form>
+          </div>
+          <button type="button" id="buttonToAddSkill" onclick="showSkills()  ">
+            Add new skill</button
+          ><br />
+          <div class="skill2" id="skill2"></div>
+        </div>
+        <br /><br />
+
+        <h1 class="info2">Biography</h1>
+        <br />
+        <input
+          type="button"
+          id="biography-button"
+          class="biographyAddButton"
+          value="Add Biography"
+          onclick="AddBio()"
+        />
+        <input
+          type="button"
+          id="biography-button2"
+          class="biographyDelButton"
+          value="Remove Biography"
+          onclick="RemoveBio()"
+        />
+        <div class="biography-container" id="biography-container"></div>
+      </div>
+      <div class="rightpane">
+        <div>
+          <br />
+          <h1 class="info2">Projects</h1>
+          <br />
+          <button type="button" id="buttonToAddSkill" onclick="addProjects()  ">
+            Add</button
+          ><br /><br />
+          <div class="parentProject" id="parentProject"></div>
+        </div>
+        <br /><br /><br />
+        <h1 class="info2">Custom Section</h1>
+        <br />
+        <div class="custom">
+          <div>
+            <form
+              id="customForm"
+              class="customForm"
+              name="customForm"
+              style="display: none"
+            >
+              <label for="customName">Title:</label>
+              <input
+                type="text"
+                id="customNamez"
+                name="customName"
+                size="25"
+                placeholder="Language/Hobbies/Interests"
+              />
+              <label for="customDescription">Description:</label>
+              <input
+                type="text"
+                id="customDescription"
+                name="customDescription"
+                size="100"
+                placeholder="English: My native language"
+              />
+              <button type="button" id="remove" onclick="hideCustom()">x</button
+              ><br />
+              <button type="button" id="submit2" onclick="validateCustom()">
+                add
+              </button>
+            </form>
+          </div>
+          <button type="button" id="buttonToAddCustom" onclick="showCustom()  ">
+            Add new Section</button
+          ><br /><br />
+          <div class="custom2" id="custom2"></div>
+        </div>
+        <br /><br /><br /><br />
+        <h1 class="info2">Generate View</h1>
+        <br /><br />
+        <button type="button" id="view" onclick="generateView()">
+          View Profile</button
+        ><br /><br />
+        <button type="button" id="view" onclick="editView()">
+          Edit Profile
+        </button>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="a2.js"></script>
+  </body>
+</html>

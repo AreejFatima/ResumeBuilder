@@ -1,0 +1,256 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #d7d8cd;
+}
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.leftpane,
+.middlepane,
+.rightpane {
+  width: 33.33%;
+  float: left;
+  height: 100%;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* background-color: #F2EBE5; */
+}
+.toppane {
+  width: 100%;
+  height: 80px;
+  background-color: #3d4e50;
+}
+canvas {
+  display: block;
+  margin-top: 4%;
+  background-color: #0c0d34;
+  border-radius: 5%;
+  margin-left: 10%;
+  display: block;
+  width: 200px;
+  height: 150px;
+  background-image: url(avatar.png);
+  background-position: center;
+  border: 5px solid #3d4e50;
+}
+.dp input {
+  position: relative;
+  padding: 3px 3px;
+  margin-left: -25%;
+  visibility: hidden;
+}
+.info {
+  background-color: #f9a66c;
+  border-radius: 8px;
+  color: #222525;
+  border: 3px solid #3d4e50;
+  padding: 8px 10px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: -35%;
+  width: 50%;
+}
+.dp input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: 3px solid #ffc94b;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 8px 10px;
+  margin-top: 1%;
+  margin-left: -30%;
+  width: 30%;
+  height: 2%;
+  font-size: smaller;
+  background-color: #f17a79;
+}
+
+.Personaldetails button {
+  width: 100px;
+  height: 30px;
+}
+
+#popup {
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: rgba(50, 50, 50, 0.9);
+}
+#form {
+  position: absolute;
+  background-color: #ffe7b3;
+  border: 1px solid #212121;
+  border-radius: 2px;
+  padding: 20px;
+  width: 300px;
+  left: 50%;
+  top: 10%;
+  margin-left: -150px;
+}
+.Personaldetails input {
+  width: 250px;
+  margin-bottom: 20px;
+}
+#close {
+  position: absolute;
+  font-weight: bold;
+  margin-left: 139px;
+  margin-top: -19px;
+  width: 30px;
+  height: 27px;
+}
+.Personaldetails p1 {
+  float: left;
+  margin-left: 30px;
+}
+.cont {
+  background-color: #f17a7e;
+  border-radius: 5px;
+  padding: 40px 40px;
+  width: 35%;
+  margin-left: 8%;
+  text-align: left;
+  font-size: 17px;
+  border: 2px solid #ffc94b;
+}
+#add {
+  margin: 10px;
+  background-color: lightgray;
+  border: 2px solid #3d4e50;
+  margin-left: -27%;
+  width: 10%;
+  height: 2%;
+}
+
+.biography-container textarea {
+  display: block;
+  resize: none;
+}
+#bioDiv {
+  background-color: #f17a7e;
+  border-radius: 5px;
+  width: 50%;
+  margin-left: 21%;
+  padding: 20px 20px;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 17px;
+  border: 2px solid #ffc94b;
+  word-wrap: break-word;
+}
+#bioDiv::placeholder {
+  color: #0c0d34;
+}
+.info2 {
+  background-color: #f9a66c;
+  border-radius: 8px;
+  color: #222525;
+  border: 3px solid #3d4e50;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 0%;
+  width: 50%;
+}
+.biographyAddButton {
+  background-color: lightgray;
+  margin-top: 2%;
+}
+#degreeRemove {
+  background-color: lightgray;
+}
+.degree {
+  background-color: #f17a7e;
+  border-radius: 5px;
+  border: 2px solid #ffc94b;
+}
+#add2 {
+  margin: 10px;
+  background-color: lightgray;
+  border: 2px solid #3d4e50;
+  width: 10%;
+  height: 2%;
+}
+#skillName {
+  display: inline-block;
+  background-color: darkgray;
+  width: 20%;
+  border: 3px solid #3d4e50;
+  border-radius: 50%;
+  margin-top: 2px;
+  margin-right: 2px;
+}
+#skillNameStyle {
+  background-color: #f17a7e;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: large;
+}
+#newProject {
+  background-color: #f17a7e;
+  border: 2px solid #ffc94b;
+  width: 50%;
+  margin-left: 25%;
+  height: 35px;
+  margin-bottom: 3px;
+  text-align: center;
+}
+#buttonToAddSkill {
+  background-color: lightgray;
+}
+#delproj {
+  float: right;
+  margin-right: 5%;
+  margin-top: 10px;
+}
+#customName {
+  background-color: #f17a7e;
+  border: 2px solid #ffc94b;
+  margin-left: 20%;
+  margin-right: 20%;
+  height: 100px;
+  margin-bottom: 3px;
+  text-align: center;
+}
+#delCustom {
+  float: right;
+  margin-right: 0%;
+  margin-top: -101px;
+}
+#view {
+  background-color: #f17a79;
+  border-radius: 8px;
+  color: #212121;
+  border: 3px solid #ffc94b;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 0%;
+  width: 35%;
+}
+
+.toppane h1 {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 25pt;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-bottom: 10%;
+}
